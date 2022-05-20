@@ -8,6 +8,16 @@
 </head>
 <body>
     <h1>Produtos - Criar</h1>
+    <form action="{{route('produto/inserir')}}" method="POST">
+    @csrf
+        <p>Nome</p>
+        <input type="text" name="nome" />
+        <p>Descrição</p>
+        <textarea name="descricao"></textarea>
+        <p>Preço</p>
+        <input type="text" name="preco" />
+        <input type="submit"/>
+    </form>
 
 </body>
 </html>
