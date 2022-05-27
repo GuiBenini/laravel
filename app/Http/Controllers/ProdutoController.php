@@ -26,14 +26,15 @@ class ProdutoController extends Controller
             'descricao'=>'required',
             'preco'=>'required'
         ]);
-        $produto = new Produto();   
-        
+        //Modo Manual
+        /*
+        $produto = new Produto();
         $produto->nome = $dados->nome;
         $produto->descricao = $dados->descricao;
         $produto->preco = $dados->preco;
-
         $produto->save();
-
+        */
+        Produto::create($valida);
         return redirect()->route('produto');
 
     }

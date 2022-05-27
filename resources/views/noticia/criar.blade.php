@@ -7,15 +7,15 @@
         <title>Document</title>
     </head>
     <body>  
-        <h1>Produtos - Criar</h1>
-        <form action="{{route('produto/inserir')}}" method="POST">
+        <h1>Noticias - Criar</h1>
+        <form action="{{route('noticia/inserir')}}" method="POST">
         @csrf
             <p>Nome</p>
             <input type="text" name="nome" />
             <p>Descrição</p>
             <textarea name="descricao"></textarea>
-            <p>Preço</p>
-            <input type="text" name="preco" /><br>
+            <p>Data</p>
+            <input type="text" name="data" /><br>
             <br>    
             <input type="submit" value="Enviar Cadastro"/>
         </form>
