@@ -11,7 +11,7 @@
         <form action="{{route('noticia/inserir')}}" method="POST">
         @csrf
             <p>Nome</p>
-            <input type="text" name="nome" />
+            <input type="text" name="nome" value="{{old('nome')}}"/>
             <p>Descrição</p>
             <textarea name="descricao"></textarea>
             <p>Data</p>
