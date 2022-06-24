@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\NoticiasController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\UsuariosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,9 @@ Route::get('/noticia', [NoticiasController::class, 'index'])->name('noticia');
 Route::get('/noticia/criar', [NoticiasController::class, 'criar'])->name('noticia/criar');
 Route::get('/noticia/ver/{not}', [NoticiasController::class, 'ver'])->name('noticia/ver');
 Route::post('/noticia/criar', [NoticiasController::class, 'inserir'])->name('noticia/inserir');
+
+
+Route::get('/login', [UsuariosController::class,'index'])->name('usuario.index');
+Route::post('/login', [UsuariosController::class,'login']);
+
+Route::get('/logout', [UsuariosController::class,'logout'])->name('usuario.logout');
